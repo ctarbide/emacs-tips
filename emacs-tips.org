@@ -1,0 +1,220 @@
+# -*- mode:org; coding:utf-8 -*-
+
+#+TITLE: Emacs Tips
+#+STARTUP: indent
+
+* For the absolute beginner
+Press Control + 'h' then 't'.
+** Finding more information
+- Help Index
+  - C-h ?
+- Symbol Search
+  - M-x apropos RET
+- Emacs
+  - Emacs Manual (C-h r, C-h i m emacs)
+    - info:emacs
+- Emacs Lisp
+  - Introduction to Programming in Emacs Lisp (C-h i m Emacs Lisp Intro)
+    - info:eintr
+  - Emacs Lisp Reference Manual (C-h i m Elisp)
+    - info:elisp
+** Shortcuts
+*** Help/Discovery/Diagnostics
+- C-h ? b :: Display all key bindings
+- C-h k :: Describe a key binding
+- C-h c :: Describe a key binding briefly
+- C-h m :: Describe current major and minor modes
+- C-c C-h :: show all bindings starting with "C-c" prefix
+- C-x C-h :: show all bindings starting with "C-x" prefix
+- C-x c C-h :: show all bindings starting with "C-x c" prefix
+*** Text Selection
+- C-x h :: mark-whole-buffer
+*** Basic Editing
+*** Macros
+* File Variables
+File variables are important to select and customize major and minor
+modes in a file-by-file basis, see [[info:emacs#Specifying File Variables][Specifying File Variables]]
+
+How to access/examine/inspect file variables? <elisp:(symbol-value
+'file-local-variables-alist)>, this variable may be nil, as it is best
+practice to remove them as they are consumed by their handling modes.
+
+See also:
+- [[info:emacs#Directory Variables][Directory Variables]]
+* Org Mode Tips
+** Shortcuts
+*** Basics and navigation.
+- TAB / S-TAB :: (un)fold
+- M-up/down :: move a headline up or down
+- M-left/right :: promote or demote a headline
+- C-RET :: insert a new headline
+- M-RET :: insert a new item
+- C-c - :: change list style
+- C-c / t :: show TODOs in current document
+- S-left/right :: very useful, depends on context
+- C-c C-c :: context-dependant, toggle checkboxes, tagging
+- C-c C-o :: opens link
+- C-c C-e :: export menu (try 'h' then 'o')
+- C-c C-e C-s :: export scope configuration
+- C-c C-z :: take note
+- C-c C-t :: cycle task states
+- C-u 5 C-c C-t :: set 5th task state (or clean it if 5th is not
+                   set)
+*** Miscellaneous
+- C-c C-, :: org-insert-structure-template (e.g. insert being_src
+             blocks)
+- C-c ' :: org-edit-special, org-edit-export-block and others
+- C-c $ :: org-archive-subtree
+** Links
+- explict using angular/angle brackets: <info:eintr#Symbols as Chest>
+- implict/nice/rich using square brackets: [[info:eintr#Symbols as Chest][eintr: Symbols as Chest]]
+** Examples
+*** Lord of the Rings (from org4beginners)
+My favorite scenes are (in this order)
+1. The attack of the Rohirrim
+2. Eowyn's fight with the witch king
+   1. this was already my favorite scene in the book
+   2. I really like Miranda Otto.
+3. Peter Jackson being shot by Legolas
+   1. on DVD only
+   He makes a really funny face when it happens.
+   But in the end, no individual scenes matter but the film as a whole.
+   Important actors in this film are:
+   - Elijah Wood :: He plays Frodo
+   - Sean Austin :: He plays Sam, Frodo's friend.  I still remember
+                    him very well from his role as Mikey Walsh in The Goonies.
+*** Text Markups
+You can make words *bold*, /italic/, _underlined_, =code= and
+~verbatim~, and, if you must, +strike-through+.
+*** Checkboxes
+**** Basic [1/2] [50%]
+- [ ] an item
+- [X] uset C-c C-c to toggle
+**** Sublists
+- [-] Group 1
+  + [ ] item 1
+  + [X] item 2
+- [1/2] Group 2
+  + [ ] item 1
+  + [X] item 2
+- [50%] Group 3
+  + [ ] item 1
+  + [X] item 2
+- [1/2] Group 4 (does not count subitems)
+  * [X] item 1
+  * [-] item 2
+    1. [X] subitem 2.1
+    2. [ ] subitem 2.2
+- [50%] Group 5 (does not count subitems)
+  * [X] item 1
+  * [-] item 2
+    1. [X] subitem 2.1
+    2. [ ] subitem 2.2
+** Export
+*** Shortcuts
+- HTML
+  - ‘C-c C-e h h’ (‘org-html-export-to-html’)
+  - ‘C-c C-e h H’ (‘org-html-export-as-html’)
+  - ‘C-c C-e h o’ (‘org-html-export-as-html’)
+    - exports and open in browser
+  - M-x org-html-convert-region-to-html
+    - insert html in current buffer at point
+- LaTeX
+  - ‘C-c C-e l l’ (‘org-latex-export-to-latex’)
+*** References
+- (info "(org)HTML export commands")
+- (info "(org)LaTeX/PDF export commands")
+** Configuration
+*** Change default workflow states
+Add this to your initialization script:
+#+begin_src emacs-lisp
+(setq org-todo-keywords
+  '((sequence "TODO" "IN-PROGRESS" "WAITING" "WONTDO" "DONE")))
+#+end_src
+*** Add timestamp when tasks are DONE
+#+begin_src conf
+  ,#+STARTUP: logdone
+#+end_src
+** More Shortcuts
+- M-2 C-c . :: insert timestamp
+** References
+Some nice material.
+- https://orgmode.org/worg/org-tutorials/org4beginners.html
+  - https://bzg.fr/en/org-playing-with-lists-screencast.html/
+* IDO Tips
+C-s, C-r, C-f, C-d, C-e are the most important when creating new
+files and opening directories
+** Shortcuts for ido-find-file
+#+begin_src text
+  RET     Select the file at the front of the list of matches.
+  If the list is empty, possibly prompt to create new file.
+
+  C-j     Use the current input string verbatim.
+
+  C-s     Put the first element at the end of the list.
+  C-r     Put the last element at the start of the list.
+  TAB     Complete a common suffix to the current string that matches
+  all files.  If there is only one match, select that file.
+  If there is no common suffix, show a list of all matching files
+  in a separate window.
+  C-d     Open the specified directory in Dired mode.
+  C-e     Edit input string (including directory).
+  M-p     Go to previous directory in work directory history.
+  M-n     Go to next directory in work directory history.
+  M-s     Search for file in the work directory history.
+  M-k     Remove current directory from the work directory history.
+  M-o     Cycle to previous file in work file history.
+  C-M-o   Cycle to next file in work file history.
+  M-f     Prompt for a file and use find to locate it.
+  M-d     Prompt for a directory and use find to locate it.
+  M-m     Prompt for a directory to create in current directory.
+  C-x C-f Fallback to non-Ido version of current command.
+  C-t     Toggle regexp searching.
+  C-p     Toggle between substring and prefix matching.
+  C-c     Toggle case-sensitive searching of file names.
+  M-l     Toggle literal reading of this file.
+  ?       Show list of matching files in separate window.
+  C-a     Toggle ignoring files listed in ‘ido-ignore-files’.
+#+end_src
+** Shortcuts for ido-switch-buffer
+#+begin_src text
+  RET     Select the buffer at the front of the list of matches.
+          If the list is empty, possibly prompt to create new buffer.
+
+  C-j     Use the current input string verbatim.
+
+  C-s     Put the first element at the end of the list.
+  C-r     Put the last element at the start of the list.
+  TAB     Complete a common suffix to the current string that matches
+          all buffers.  If there is only one match, select that buffer.
+          If there is no common suffix, show a list of all matching buffers
+          in a separate window.
+  C-e     Edit input string.
+  C-x C-b Fallback to non-ido version of current command.
+  C-t     Toggle regexp searching.
+  C-p     Toggle between substring and prefix matching.
+  C-c     Toggle case-sensitive searching of buffer names.
+  ?       Show list of matching buffers in separate window.
+  C-x C-f Drop into ‘ido-find-file’.
+  C-k     Kill buffer at head of buffer list.
+  C-a     Toggle ignoring buffers listed in ‘ido-ignore-buffers’.
+#+end_src
+** References
+- http://ergoemacs.org/emacs/emacs_ido_mode.html
+- C-h f ido-find-file RET
+- C-h f ido-switch-buffer RET
+* Lisp Editing
+** Shortcuts
+*** Lisp evaluation
+- M-:
+- C-x e
+- C-M-x
+- M-x ielm
+* Lisp Debugging
+* Emacs/Elisp Troubleshooting
+** Controlled startup
+See [[info:org#Batch execution][(org) Batch execution]] for an example using =-Q=, =--batch= and
+=--eval= flags.
+* References
+- https://github.com/chrisdone/elisp-guide
+- (info "(emacs) Specifying File Variables")
