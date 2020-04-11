@@ -18,19 +18,40 @@ Press Control + 'h' then 't'.
     - info:eintr
   - Emacs Lisp Reference Manual (C-h i m Elisp)
     - info:elisp
-** Shortcuts
-*** Help/Discovery/Diagnostics
+* Shortcuts
+** Help/Discovery/Diagnostics
 - C-h ? b :: Display all key bindings
+- C-h b :: Display all key bindings
 - C-h k :: Describe a key binding
 - C-h c :: Describe a key binding briefly
 - C-h m :: Describe current major and minor modes
 - C-c C-h :: show all bindings starting with "C-c" prefix
 - C-x C-h :: show all bindings starting with "C-x" prefix
 - C-x c C-h :: show all bindings starting with "C-x c" prefix
-*** Text Selection
+** Info Pages
+Info pages are a rich and reliable source of information.
+- C-h i :: open info directory
+- TAB :: next link
+- S-TAB :: previous link
+- M-x info-apropos :: search in the indices of all manuals
+- ? :: open summary of all info commands
+- d :: go to info directoy
+- m :: go to a menu item
+- I :: search in the indices of current manual
+- n :: next
+- p :: previous
+- u :: up
+- t :: top
+- q :: quit (selects previous buffer)
+** Text Selection
 - C-x h :: mark-whole-buffer
-*** Basic Editing
-*** Macros
+** Basic Editing
+** Macros
+** Lisp evaluation
+- M-:
+- C-x C-e
+- C-M-x
+- M-x ielm
 * File Variables
 File variables are important to select and customize major and minor
 modes in a file-by-file basis, see [[info:emacs#Specifying File Variables][Specifying File Variables]]
@@ -49,6 +70,7 @@ See also:
 - M-left/right :: promote or demote a headline
 - C-RET :: insert a new headline
 - M-RET :: insert a new item
+- C-c C-w :: move entries
 - C-c - :: change list style
 - C-c / t :: show TODOs in current document
 - S-left/right :: very useful, depends on context
@@ -135,6 +157,9 @@ Add this to your initialization script:
 #+begin_src conf
   ,#+STARTUP: logdone
 #+end_src
+** Evaluation of Code Blocks
+- [[info:org#Evaluating code blocks][(org) Evaluating code blocks]]
+- [[info:org#Results of evaluation][(org) Results of evaluation]]
 ** More Shortcuts
 - M-2 C-c . :: insert timestamp
 ** References
@@ -203,15 +228,10 @@ files and opening directories
 - http://ergoemacs.org/emacs/emacs_ido_mode.html
 - C-h f ido-find-file RET
 - C-h f ido-switch-buffer RET
-* Lisp Editing
-** Shortcuts
-*** Lisp evaluation
-- M-:
-- C-x e
-- C-M-x
-- M-x ielm
 * Lisp Debugging
 * Emacs/Elisp Troubleshooting
+** Font test
+- C-h h :: view-hello-file
 ** Controlled startup
 See [[info:org#Batch execution][(org) Batch execution]] for an example using =-Q=, =--batch= and
 =--eval= flags.
