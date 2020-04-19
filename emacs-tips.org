@@ -18,7 +18,7 @@ Press Control + 'h' then 't'.
     - info:eintr
   - Emacs Lisp Reference Manual (C-h i m Elisp)
     - info:elisp
-* Shortcuts
+* Shortcuts/Key Bindings
 ** Help/Discovery/Diagnostics
 - C-h ? b :: Display all key bindings
 - C-h b :: Display all key bindings
@@ -37,21 +37,36 @@ Info pages are a rich and reliable source of information.
 - ? :: open summary of all info commands
 - d :: go to info directoy
 - m :: go to a menu item
+- s :: regexp search document
+- C-s :: incremental search forward
+- C-r :: incremental search backward
 - I :: search in the indices of current manual
 - n :: next
 - p :: previous
 - u :: up
 - t :: top
 - q :: quit (selects previous buffer)
-** Text Selection
+
+Searching goes through multiple Info nodes, see [[info:info#Search Text][(info) Search Text]] for
+more information.
+** Text Selection and Basic Editing
+- C-SPC :: set-mark-command (start selection)
+- C-w :: kill-region (cut)
+- M-w :: kill-ring-save (copy)
+- C-y :: yank (paste)
 - C-x h :: mark-whole-buffer
-** Basic Editing
-** Macros
+** Keyboard Macros
+- C-x ( :: kmacro-start-macro
+- C-x ) :: kmacro-end-macro
+- C-x e :: kmacro-end-and-call-macro
+
+See [[info:emacs#Keyboard Macros][(emacs) Keyboard Macros]] for more information.
 ** Lisp evaluation
 - M-:
 - C-x C-e
 - C-M-x
 - M-x ielm
+- M-x eshell
 * File Variables
 File variables are important to select and customize major and minor
 modes in a file-by-file basis, see [[info:emacs#Specifying File Variables][Specifying File Variables]]
@@ -167,8 +182,7 @@ Some nice material.
 - https://orgmode.org/worg/org-tutorials/org4beginners.html
   - https://bzg.fr/en/org-playing-with-lists-screencast.html/
 * IDO Tips
-C-s, C-r, C-f, C-d, C-e are the most important when creating new
-files and opening directories
+C-s, C-r, C-f, C-d, C-e, C-j are really useful, learn how to use them.
 ** Shortcuts for ido-find-file
 #+begin_src text
   RET     Select the file at the front of the list of matches.
