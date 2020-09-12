@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-12 Sat 14:29 -->
+<!-- 2020-09-12 Sat 15:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Emacs Tips</title>
@@ -247,108 +247,109 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org42ef647">1. For the absolute beginner</a>
+<li><a href="#org90417eb">1. For the absolute beginner</a>
 <ul>
-<li><a href="#orgb578db6">1.1. Finding more information</a></li>
+<li><a href="#orgd8a8ac2">1.1. Finding more information</a></li>
 </ul>
 </li>
-<li><a href="#org70deff5">2. Shortcuts/Key Bindings</a>
+<li><a href="#orgbeae075">2. Shortcuts/Key Bindings</a>
 <ul>
-<li><a href="#org256a715">2.1. Help/Discovery/Diagnostics</a></li>
-<li><a href="#org996b357">2.2. Info Pages</a></li>
-<li><a href="#org87bb3db">2.3. Text Selection and Basic Editing</a></li>
-<li><a href="#orgf562283">2.4. Keyboard Macros</a></li>
-<li><a href="#orgc216bc6">2.5. Lisp evaluation</a></li>
-<li><a href="#orgdc10d70">2.6. Eshell</a></li>
+<li><a href="#org079ed28">2.1. Help/Discovery/Diagnostics</a></li>
+<li><a href="#org67b9d11">2.2. Info Pages</a></li>
+<li><a href="#org3cbf504">2.3. Text Searching</a></li>
+<li><a href="#org1454a36">2.4. Text Selection and Basic Editing</a></li>
+<li><a href="#orgf3309a9">2.5. Keyboard Macros</a></li>
+<li><a href="#org3d31c1c">2.6. Lisp evaluation</a></li>
+<li><a href="#orge93b350">2.7. Eshell</a></li>
 </ul>
 </li>
-<li><a href="#orgdea383e">3. File Variables</a></li>
-<li><a href="#orgeb1414c">4. Org Mode Tips</a>
+<li><a href="#org949f3b8">3. File Variables</a></li>
+<li><a href="#org51651b5">4. Org Mode Tips</a>
 <ul>
-<li><a href="#org3bfc240">4.1. Shortcuts</a>
+<li><a href="#org9595d11">4.1. Shortcuts</a>
 <ul>
-<li><a href="#org38d2c4e">4.1.1. Basics and navigation.</a></li>
-<li><a href="#org87287ad">4.1.2. Miscellaneous</a></li>
+<li><a href="#org3ce1e4a">4.1.1. Basics and navigation.</a></li>
+<li><a href="#orgeadb16b">4.1.2. Miscellaneous</a></li>
 </ul>
 </li>
-<li><a href="#orgda18316">4.2. Links</a></li>
-<li><a href="#org2a056f3">4.3. Examples</a>
+<li><a href="#org38df487">4.2. Links</a></li>
+<li><a href="#org240bda2">4.3. Examples</a>
 <ul>
-<li><a href="#org042a95e">4.3.1. Lord of the Rings (from org4beginners)</a></li>
-<li><a href="#org2edcf02">4.3.2. Text Markups</a></li>
-<li><a href="#org261fad7">4.3.3. Checkboxes</a></li>
+<li><a href="#orge8e045d">4.3.1. Lord of the Rings (from org4beginners, see references)</a></li>
+<li><a href="#org242a91a">4.3.2. Text Markups</a></li>
+<li><a href="#org9c3a1de">4.3.3. Checkboxes</a></li>
 </ul>
 </li>
-<li><a href="#orgb98e7de">4.4. Export</a>
+<li><a href="#orgf194b9f">4.4. Export</a>
 <ul>
-<li><a href="#orgfaffe6a">4.4.1. Shortcuts</a></li>
-<li><a href="#orgc282fd4">4.4.2. References</a></li>
+<li><a href="#org9071e50">4.4.1. Shortcuts</a></li>
+<li><a href="#orgeff4bab">4.4.2. References</a></li>
 </ul>
 </li>
-<li><a href="#org04ab0d7">4.5. Configuration</a>
+<li><a href="#org5fcdaee">4.5. Configuration</a>
 <ul>
-<li><a href="#org1793b1f">4.5.1. Change default workflow states</a></li>
-<li><a href="#org1829267">4.5.2. Add timestamp when tasks are DONE</a></li>
-<li><a href="#org2f0da20">4.5.3. Add nice indentation and other configurations</a></li>
+<li><a href="#orgbb1c051">4.5.1. Change default workflow states</a></li>
+<li><a href="#org6fbc1d3">4.5.2. Add timestamp when tasks are DONE</a></li>
+<li><a href="#org829e96f">4.5.3. Add nice indentation and other configurations</a></li>
 </ul>
 </li>
-<li><a href="#org8ffa46f">4.6. Evaluation of Code Blocks</a></li>
-<li><a href="#org25a5dda">4.7. More Shortcuts</a></li>
-<li><a href="#orgfba33d0">4.8. References</a></li>
+<li><a href="#org1e5a7d7">4.6. Evaluation of Code Blocks</a></li>
+<li><a href="#org153738b">4.7. More Shortcuts</a></li>
+<li><a href="#org89ccb56">4.8. References</a></li>
 </ul>
 </li>
-<li><a href="#orgcddc2b0">5. IDO Tips</a>
+<li><a href="#orge3926a6">5. IDO Tips</a>
 <ul>
-<li><a href="#org682be63">5.1. Shortcuts for ido-find-file</a></li>
-<li><a href="#org04fd171">5.2. Shortcuts for ido-switch-buffer</a></li>
-<li><a href="#org51b46c0">5.3. References</a></li>
+<li><a href="#org33f1108">5.1. Shortcuts for ido-find-file</a></li>
+<li><a href="#org401a87a">5.2. Shortcuts for ido-switch-buffer</a></li>
+<li><a href="#org05e9b66">5.3. References</a></li>
 </ul>
 </li>
-<li><a href="#orgfff14dc">6. Lisp Debugging</a></li>
-<li><a href="#org3bc1a56">7. Emacs/Elisp Troubleshooting</a>
+<li><a href="#org8c0f187">6. Lisp Debugging</a></li>
+<li><a href="#org303958b">7. Emacs/Elisp Troubleshooting</a>
 <ul>
-<li><a href="#orgc8b11af">7.1. Font test</a></li>
-<li><a href="#orgd589825">7.2. Controlled startup</a></li>
+<li><a href="#org1c5a9db">7.1. Font test</a></li>
+<li><a href="#org7b43a1a">7.2. Controlled startup</a></li>
 </ul>
 </li>
-<li><a href="#orgfaf0d96">8. References</a></li>
+<li><a href="#org7ded88d">8. References</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org42ef647" class="outline-2">
-<h2 id="org42ef647"><span class="section-number-2">1</span> For the absolute beginner</h2>
+<div id="outline-container-org90417eb" class="outline-2">
+<h2 id="org90417eb"><span class="section-number-2">1</span> For the absolute beginner</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Press Control + 'h' then 't'.
 </p>
 </div>
-<div id="outline-container-orgb578db6" class="outline-3">
-<h3 id="orgb578db6"><span class="section-number-3">1.1</span> Finding more information</h3>
+<div id="outline-container-orgd8a8ac2" class="outline-3">
+<h3 id="orgd8a8ac2"><span class="section-number-3">1.1</span> Finding more information</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Help Index
 <ul class="org-ul">
-<li>C-h ?</li>
+<li><code>C-h ?</code></li>
 </ul></li>
 <li>Symbol Search
 <ul class="org-ul">
-<li>M-x apropos RET</li>
+<li><code>M-x apropos RET</code></li>
 </ul></li>
 <li>Emacs
 <ul class="org-ul">
-<li>Emacs Manual (C-h r, C-h i m emacs)
+<li>Emacs Manual (<code>C-h r</code> or <code>C-h i m emacs</code>)
 <ul class="org-ul">
 <li><a href="https://www.gnu.org/software/emacs/manual/html_mono/emacs.html#Top">emacs</a></li>
 </ul></li>
 </ul></li>
 <li>Emacs Lisp
 <ul class="org-ul">
-<li>Introduction to Programming in Emacs Lisp (C-h i m Emacs Lisp Intro)
+<li>Introduction to Programming in Emacs Lisp (<code>C-h i m Emacs Lisp Intro</code>)
 <ul class="org-ul">
 <li><a href="https://www.gnu.org/software/emacs/manual/html_mono/eintr.html#Top">eintr</a></li>
 </ul></li>
-<li>Emacs Lisp Reference Manual (C-h i m Elisp)
+<li>Emacs Lisp Reference Manual (<code>C-h i m Elisp</code>)
 <ul class="org-ul">
 <li><a href="https://www.gnu.org/software/emacs/manual/html_mono/elisp.html#Top">elisp</a></li>
 </ul></li>
@@ -357,49 +358,49 @@ Press Control + 'h' then 't'.
 </div>
 </div>
 </div>
-<div id="outline-container-org70deff5" class="outline-2">
-<h2 id="org70deff5"><span class="section-number-2">2</span> Shortcuts/Key Bindings</h2>
+<div id="outline-container-orgbeae075" class="outline-2">
+<h2 id="orgbeae075"><span class="section-number-2">2</span> Shortcuts/Key Bindings</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org256a715" class="outline-3">
-<h3 id="org256a715"><span class="section-number-3">2.1</span> Help/Discovery/Diagnostics</h3>
+<div id="outline-container-org079ed28" class="outline-3">
+<h3 id="org079ed28"><span class="section-number-3">2.1</span> Help/Discovery/Diagnostics</h3>
 <div class="outline-text-3" id="text-2-1">
 <dl class="org-dl">
-<dt>C-h ? b</dt><dd>Display all key bindings</dd>
-<dt>C-h b</dt><dd>Display all key bindings</dd>
-<dt>C-h k</dt><dd>Describe a key binding</dd>
-<dt>C-h c</dt><dd>Describe a key binding briefly</dd>
-<dt>C-h m</dt><dd>Describe current major and minor modes</dd>
-<dt>C-c C-h</dt><dd>show all bindings starting with "C-c" prefix</dd>
-<dt>C-x C-h</dt><dd>show all bindings starting with "C-x" prefix</dd>
-<dt>C-x c C-h</dt><dd>show all bindings starting with "C-x c" prefix</dd>
+<dt><code>C-h ? b</code></dt><dd>Display all key bindings</dd>
+<dt><code>C-h b</code></dt><dd>Display all key bindings</dd>
+<dt><code>C-h k</code></dt><dd>Describe a key binding</dd>
+<dt><code>C-h c</code></dt><dd>Describe a key binding briefly</dd>
+<dt><code>C-h m</code></dt><dd>Describe current major and minor modes</dd>
+<dt><code>C-c C-h</code></dt><dd>show all bindings starting with "C-c" prefix</dd>
+<dt><code>C-x C-h</code></dt><dd>show all bindings starting with "C-x" prefix</dd>
+<dt><code>C-x c C-h</code></dt><dd>show all bindings starting with "C-x c" prefix</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org996b357" class="outline-3">
-<h3 id="org996b357"><span class="section-number-3">2.2</span> Info Pages</h3>
+<div id="outline-container-org67b9d11" class="outline-3">
+<h3 id="org67b9d11"><span class="section-number-3">2.2</span> Info Pages</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Info pages are a rich and reliable source of information.
 </p>
 <dl class="org-dl">
-<dt>C-h i</dt><dd>open info directory</dd>
-<dt>TAB</dt><dd>next link</dd>
-<dt>S-TAB</dt><dd>previous link</dd>
-<dt>c</dt><dd>copy name of the current info node</dd>
-<dt>M-x info-apropos</dt><dd>search in the indices of all manuals</dd>
-<dt>?</dt><dd>open summary of all info commands</dd>
-<dt>d</dt><dd>go to info directoy</dd>
-<dt>m</dt><dd>go to a menu item</dd>
-<dt>s</dt><dd>regexp search document</dd>
-<dt>C-s</dt><dd>incremental search forward</dd>
-<dt>C-r</dt><dd>incremental search backward</dd>
-<dt>I</dt><dd>search in the indices of current manual</dd>
-<dt>n</dt><dd>next</dd>
-<dt>p</dt><dd>previous</dd>
-<dt>u</dt><dd>up</dd>
-<dt>t</dt><dd>top</dd>
-<dt>q</dt><dd>quit (selects previous buffer)</dd>
+<dt><code>C-h i</code></dt><dd>open info directory</dd>
+<dt><code>TAB</code></dt><dd>next link</dd>
+<dt><code>S-TAB</code></dt><dd>previous link</dd>
+<dt><code>c</code></dt><dd>copy name of the current info node</dd>
+<dt><code>M-x info-apropos</code></dt><dd>search in the indices of all manuals</dd>
+<dt><code>?</code></dt><dd>open summary of all info commands</dd>
+<dt><code>d</code></dt><dd>go to info directoy</dd>
+<dt><code>m</code></dt><dd>go to a menu item</dd>
+<dt><code>s</code></dt><dd>regexp search document</dd>
+<dt><code>C-s</code></dt><dd>incremental search forward</dd>
+<dt><code>C-r</code></dt><dd>incremental search backward</dd>
+<dt><code>I</code></dt><dd>search in the indices of current manual</dd>
+<dt><code>n</code></dt><dd>next</dd>
+<dt><code>p</code></dt><dd>previous</dd>
+<dt><code>u</code></dt><dd>up</dd>
+<dt><code>t</code></dt><dd>top</dd>
+<dt><code>q</code></dt><dd>quit (selects previous buffer)</dd>
 </dl>
 
 <p>
@@ -408,25 +409,36 @@ more information.
 </p>
 </div>
 </div>
-<div id="outline-container-org87bb3db" class="outline-3">
-<h3 id="org87bb3db"><span class="section-number-3">2.3</span> Text Selection and Basic Editing</h3>
+<div id="outline-container-org3cbf504" class="outline-3">
+<h3 id="org3cbf504"><span class="section-number-3">2.3</span> Text Searching</h3>
 <div class="outline-text-3" id="text-2-3">
 <dl class="org-dl">
-<dt>C-SPC</dt><dd>set-mark-command (start selection)</dd>
-<dt>C-w</dt><dd>kill-region (cut)</dd>
-<dt>M-w</dt><dd>kill-ring-save (copy)</dd>
-<dt>C-y</dt><dd>yank (paste)</dd>
-<dt>C-x h</dt><dd>mark-whole-buffer</dd>
+<dt><code>C-s</code></dt><dd>incremental search forward</dd>
+<dt><code>C-r</code></dt><dd>incremental search backward</dd>
+<dt><code>C-M-s</code></dt><dd>incremental search forward (regular expression)</dd>
+<dt><code>C-M-r</code></dt><dd>incremental search backward (regular expression)</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgf562283" class="outline-3">
-<h3 id="orgf562283"><span class="section-number-3">2.4</span> Keyboard Macros</h3>
+<div id="outline-container-org1454a36" class="outline-3">
+<h3 id="org1454a36"><span class="section-number-3">2.4</span> Text Selection and Basic Editing</h3>
 <div class="outline-text-3" id="text-2-4">
 <dl class="org-dl">
-<dt>C-x (</dt><dd>kmacro-start-macro</dd>
-<dt>C-x )</dt><dd>kmacro-end-macro</dd>
-<dt>C-x e</dt><dd>kmacro-end-and-call-macro</dd>
+<dt><code>C-SPC</code></dt><dd>set-mark-command (start selection)</dd>
+<dt><code>C-w</code></dt><dd>kill-region (cut)</dd>
+<dt><code>M-w</code></dt><dd>kill-ring-save (copy)</dd>
+<dt><code>C-y</code></dt><dd>yank (paste)</dd>
+<dt><code>C-x h</code></dt><dd>mark-whole-buffer</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgf3309a9" class="outline-3">
+<h3 id="orgf3309a9"><span class="section-number-3">2.5</span> Keyboard Macros</h3>
+<div class="outline-text-3" id="text-2-5">
+<dl class="org-dl">
+<dt><code>C-x (</code></dt><dd>kmacro-start-macro</dd>
+<dt><code>C-x )</code></dt><dd>kmacro-end-macro</dd>
+<dt><code>C-x e</code></dt><dd>kmacro-end-and-call-macro</dd>
 </dl>
 
 <p>
@@ -434,34 +446,39 @@ See <a href="https://www.gnu.org/software/emacs/manual/html_mono/emacs.html#Keyb
 </p>
 </div>
 </div>
-<div id="outline-container-orgc216bc6" class="outline-3">
-<h3 id="orgc216bc6"><span class="section-number-3">2.5</span> Lisp evaluation</h3>
-<div class="outline-text-3" id="text-2-5">
-<ul class="org-ul">
-<li>M-:</li>
-<li>C-x C-e</li>
-<li>C-M-x</li>
-<li>M-x ielm</li>
-<li>M-x eshell</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgdc10d70" class="outline-3">
-<h3 id="orgdc10d70"><span class="section-number-3">2.6</span> Eshell</h3>
+<div id="outline-container-org3d31c1c" class="outline-3">
+<h3 id="org3d31c1c"><span class="section-number-3">2.6</span> Lisp evaluation</h3>
 <div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li><code>M-:</code></li>
+<li><code>C-x C-e</code></li>
+<li><code>C-M-x</code></li>
+<li><code>M-x ielm</code></li>
+<li><code>M-x eshell</code></li>
+</ul>
+
+<p>
+You really should known what each of these do, also remember that <code>C-h
+k</code> is a great friend.
+</p>
+</div>
+</div>
+<div id="outline-container-orge93b350" class="outline-3">
+<h3 id="orge93b350"><span class="section-number-3">2.7</span> Eshell</h3>
+<div class="outline-text-3" id="text-2-7">
 <dl class="org-dl">
-<dt>M-p</dt><dd>previous command (match prefix)</dd>
-<dt>M-n</dt><dd>next command (match prefix)</dd>
-<dt>C-c C-c</dt><dd>eshell-interrupt-process</dd>
-<dt>C-c C-p</dt><dd>eshell-previous-prompt</dd>
-<dt>C-c C-n</dt><dd>eshell-next-prompt</dd>
-<dt>C-c C-l</dt><dd>eshell-list-history</dd>
+<dt><code>M-p</code></dt><dd>previous command (match prefix)</dd>
+<dt><code>M-n</code></dt><dd>next command (match prefix)</dd>
+<dt><code>C-c C-c</code></dt><dd>eshell-interrupt-process</dd>
+<dt><code>C-c C-p</code></dt><dd>eshell-previous-prompt</dd>
+<dt><code>C-c C-n</code></dt><dd>eshell-next-prompt</dd>
+<dt><code>C-c C-l</code></dt><dd>eshell-list-history</dd>
 </dl>
 </div>
 </div>
 </div>
-<div id="outline-container-orgdea383e" class="outline-2">
-<h2 id="orgdea383e"><span class="section-number-2">3</span> File Variables</h2>
+<div id="outline-container-org949f3b8" class="outline-2">
+<h2 id="org949f3b8"><span class="section-number-2">3</span> File Variables</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 File variables are important to select and customize major and minor
@@ -481,52 +498,52 @@ See also:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeb1414c" class="outline-2">
-<h2 id="orgeb1414c"><span class="section-number-2">4</span> Org Mode Tips</h2>
+<div id="outline-container-org51651b5" class="outline-2">
+<h2 id="org51651b5"><span class="section-number-2">4</span> Org Mode Tips</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org3bfc240" class="outline-3">
-<h3 id="org3bfc240"><span class="section-number-3">4.1</span> Shortcuts</h3>
+<div id="outline-container-org9595d11" class="outline-3">
+<h3 id="org9595d11"><span class="section-number-3">4.1</span> Shortcuts</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org38d2c4e" class="outline-4">
-<h4 id="org38d2c4e"><span class="section-number-4">4.1.1</span> Basics and navigation.</h4>
+<div id="outline-container-org3ce1e4a" class="outline-4">
+<h4 id="org3ce1e4a"><span class="section-number-4">4.1.1</span> Basics and navigation.</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <dl class="org-dl">
-<dt>TAB / S-TAB</dt><dd>(un)fold</dd>
-<dt>M-up/down</dt><dd>move a headline up or down</dd>
-<dt>M-left/right</dt><dd>promote or demote a headline</dd>
-<dt>C-RET</dt><dd>insert a new headline</dd>
-<dt>M-RET</dt><dd>insert a new item</dd>
-<dt>C-c C-w</dt><dd>move entries</dd>
-<dt>C-c -</dt><dd>change list style</dd>
-<dt>C-c / t</dt><dd>show TODOs in current document</dd>
-<dt>S-left/right</dt><dd>very useful, depends on context</dd>
-<dt>C-c C-c</dt><dd>context-dependant, toggle checkboxes, tagging</dd>
-<dt>C-c C-o</dt><dd>opens link</dd>
-<dt>C-c C-e</dt><dd>export menu (try 'h' then 'o')</dd>
-<dt>C-c C-e C-s</dt><dd>export scope configuration</dd>
-<dt>C-c C-z</dt><dd>take note</dd>
-<dt>C-c C-t</dt><dd>cycle task states</dd>
-<dt>C-u 5 C-c C-t</dt><dd>set 5th task state (or clean it if 5th is not
+<dt><code>TAB</code> / <code>S-TAB</code></dt><dd>(un)fold</dd>
+<dt><code>M-up</code> / <code>M-down</code></dt><dd>move a headline up or down</dd>
+<dt><code>M-left</code> / <code>M-right</code></dt><dd>promote or demote a headline</dd>
+<dt><code>C-RET</code></dt><dd>insert a new headline</dd>
+<dt><code>M-RET</code></dt><dd>insert a new item</dd>
+<dt><code>C-c C-w</code></dt><dd>move entries</dd>
+<dt><code>C-c -</code></dt><dd>change list style</dd>
+<dt><code>C-c / t</code></dt><dd>show TODOs in current document</dd>
+<dt><code>S-left</code> / <code>S-right</code></dt><dd>very useful, depends on context</dd>
+<dt><code>C-c C-c</code></dt><dd>context-dependant, toggle checkboxes, tagging</dd>
+<dt><code>C-c C-o</code></dt><dd>opens link</dd>
+<dt><code>C-c C-e</code></dt><dd>export menu (try 'h' then 'o')</dd>
+<dt><code>C-c C-e C-s</code></dt><dd>export scope configuration</dd>
+<dt><code>C-c C-z</code></dt><dd>take note</dd>
+<dt><code>C-c C-t</code></dt><dd>cycle task states</dd>
+<dt><code>C-u 5 C-c C-t</code></dt><dd>set 5th task state (or clean it if 5th is not
 set)</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org87287ad" class="outline-4">
-<h4 id="org87287ad"><span class="section-number-4">4.1.2</span> Miscellaneous</h4>
+<div id="outline-container-orgeadb16b" class="outline-4">
+<h4 id="orgeadb16b"><span class="section-number-4">4.1.2</span> Miscellaneous</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <dl class="org-dl">
-<dt>C-c C-,</dt><dd>org-insert-structure-template (e.g. insert being<sub>src</sub>
+<dt><code>C-c C-,</code></dt><dd>org-insert-structure-template (e.g. insert being<sub>src</sub>
 blocks)</dd>
-<dt>C-c '</dt><dd>org-edit-special, org-edit-export-block and others</dd>
-<dt>C-c $</dt><dd>org-archive-subtree</dd>
+<dt><code>C-c '</code></dt><dd>org-edit-special, org-edit-export-block and others</dd>
+<dt><code>C-c $</code> or <code>C-c C-x C-s</code></dt><dd>org-archive-subtree</dd>
 </dl>
 </div>
 </div>
 </div>
-<div id="outline-container-orgda18316" class="outline-3">
-<h3 id="orgda18316"><span class="section-number-3">4.2</span> Links</h3>
+<div id="outline-container-org38df487" class="outline-3">
+<h3 id="org38df487"><span class="section-number-3">4.2</span> Links</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>explict using angular/angle brackets: <a href="https://www.gnu.org/software/emacs/manual/html_mono/eintr.html#Symbols-as-Chest">eintr#Symbols as Chest</a></li>
@@ -534,12 +551,12 @@ blocks)</dd>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2a056f3" class="outline-3">
-<h3 id="org2a056f3"><span class="section-number-3">4.3</span> Examples</h3>
+<div id="outline-container-org240bda2" class="outline-3">
+<h3 id="org240bda2"><span class="section-number-3">4.3</span> Examples</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-org042a95e" class="outline-4">
-<h4 id="org042a95e"><span class="section-number-4">4.3.1</span> Lord of the Rings (from org4beginners)</h4>
+<div id="outline-container-orge8e045d" class="outline-4">
+<h4 id="orge8e045d"><span class="section-number-4">4.3.1</span> Lord of the Rings (from org4beginners, see references)</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <p>
 My favorite scenes are (in this order)
@@ -570,8 +587,8 @@ him very well from his role as Mikey Walsh in The Goonies.</dd>
 </ol>
 </div>
 </div>
-<div id="outline-container-org2edcf02" class="outline-4">
-<h4 id="org2edcf02"><span class="section-number-4">4.3.2</span> Text Markups</h4>
+<div id="outline-container-org242a91a" class="outline-4">
+<h4 id="org242a91a"><span class="section-number-4">4.3.2</span> Text Markups</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <p>
 You can make words <b>bold</b>, <i>italic</i>, <span class="underline">underlined</span>, <code>code</code> and
@@ -579,12 +596,12 @@ You can make words <b>bold</b>, <i>italic</i>, <span class="underline">underline
 </p>
 </div>
 </div>
-<div id="outline-container-org261fad7" class="outline-4">
-<h4 id="org261fad7"><span class="section-number-4">4.3.3</span> Checkboxes</h4>
+<div id="outline-container-org9c3a1de" class="outline-4">
+<h4 id="org9c3a1de"><span class="section-number-4">4.3.3</span> Checkboxes</h4>
 <div class="outline-text-4" id="text-4-3-3">
 </div>
 <ol class="org-ol">
-<li><a id="org95e5044"></a>Basic <code>[1/2]</code> <code>[50%]</code><br />
+<li><a id="org74571c7"></a>Basic <code>[1/2]</code> <code>[50%]</code><br />
 <div class="outline-text-5" id="text-4-3-3-1">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> an item</li>
@@ -592,7 +609,7 @@ You can make words <b>bold</b>, <i>italic</i>, <span class="underline">underline
 </ul>
 </div>
 </li>
-<li><a id="org1e4e057"></a>Sublists<br />
+<li><a id="org39493f0"></a>Sublists<br />
 <div class="outline-text-5" id="text-4-3-3-2">
 <ul class="org-ul">
 <li class="trans"><code>[-]</code> Group 1
@@ -634,36 +651,36 @@ You can make words <b>bold</b>, <i>italic</i>, <span class="underline">underline
 </ol>
 </div>
 </div>
-<div id="outline-container-orgb98e7de" class="outline-3">
-<h3 id="orgb98e7de"><span class="section-number-3">4.4</span> Export</h3>
+<div id="outline-container-orgf194b9f" class="outline-3">
+<h3 id="orgf194b9f"><span class="section-number-3">4.4</span> Export</h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
-<div id="outline-container-orgfaffe6a" class="outline-4">
-<h4 id="orgfaffe6a"><span class="section-number-4">4.4.1</span> Shortcuts</h4>
+<div id="outline-container-org9071e50" class="outline-4">
+<h4 id="org9071e50"><span class="section-number-4">4.4.1</span> Shortcuts</h4>
 <div class="outline-text-4" id="text-4-4-1">
 <ul class="org-ul">
 <li>HTML
 <ul class="org-ul">
-<li>‘C-c C-e h h’ (‘org-html-export-to-html’)</li>
-<li>‘C-c C-e h H’ (‘org-html-export-as-html’)</li>
-<li>‘C-c C-e h o’ (‘org-html-export-as-html’)
+<li><code>C-c C-e h h</code> (<code>M-x org-html-export-to-html</code>)</li>
+<li><code>C-c C-e h H</code> (<code>M-x org-html-export-as-html</code>)</li>
+<li><code>C-c C-e h o</code> (<code>C-u M-x org-html-export-to-html</code>)
 <ul class="org-ul">
 <li>exports and open in browser</li>
 </ul></li>
-<li>M-x org-html-convert-region-to-html
+<li><code>M-x org-html-convert-region-to-html</code>
 <ul class="org-ul">
 <li>insert html in current buffer at point</li>
 </ul></li>
 </ul></li>
 <li>LaTeX
 <ul class="org-ul">
-<li>‘C-c C-e l l’ (‘org-latex-export-to-latex’)</li>
+<li><code>C-c C-e l l</code> (<code>M-x org-latex-export-to-latex</code>)</li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc282fd4" class="outline-4">
-<h4 id="orgc282fd4"><span class="section-number-4">4.4.2</span> References</h4>
+<div id="outline-container-orgeff4bab" class="outline-4">
+<h4 id="orgeff4bab"><span class="section-number-4">4.4.2</span> References</h4>
 <div class="outline-text-4" id="text-4-4-2">
 <ul class="org-ul">
 <li><code>M-:</code> then <code>(info-other-window "(org) HTML export commands")</code></li>
@@ -672,12 +689,12 @@ You can make words <b>bold</b>, <i>italic</i>, <span class="underline">underline
 </div>
 </div>
 </div>
-<div id="outline-container-org04ab0d7" class="outline-3">
-<h3 id="org04ab0d7"><span class="section-number-3">4.5</span> Configuration</h3>
+<div id="outline-container-org5fcdaee" class="outline-3">
+<h3 id="org5fcdaee"><span class="section-number-3">4.5</span> Configuration</h3>
 <div class="outline-text-3" id="text-4-5">
 </div>
-<div id="outline-container-org1793b1f" class="outline-4">
-<h4 id="org1793b1f"><span class="section-number-4">4.5.1</span> Change default workflow states</h4>
+<div id="outline-container-orgbb1c051" class="outline-4">
+<h4 id="orgbb1c051"><span class="section-number-4">4.5.1</span> Change default workflow states</h4>
 <div class="outline-text-4" id="text-4-5-1">
 <p>
 Add this to your initialization script:
@@ -689,8 +706,8 @@ Add this to your initialization script:
 </div>
 </div>
 </div>
-<div id="outline-container-org1829267" class="outline-4">
-<h4 id="org1829267"><span class="section-number-4">4.5.2</span> Add timestamp when tasks are DONE</h4>
+<div id="outline-container-org6fbc1d3" class="outline-4">
+<h4 id="org6fbc1d3"><span class="section-number-4">4.5.2</span> Add timestamp when tasks are DONE</h4>
 <div class="outline-text-4" id="text-4-5-2">
 <div class="org-src-container">
 <pre class="src src-conf">#+STARTUP: logdone
@@ -698,8 +715,8 @@ Add this to your initialization script:
 </div>
 </div>
 </div>
-<div id="outline-container-org2f0da20" class="outline-4">
-<h4 id="org2f0da20"><span class="section-number-4">4.5.3</span> Add nice indentation and other configurations</h4>
+<div id="outline-container-org829e96f" class="outline-4">
+<h4 id="org829e96f"><span class="section-number-4">4.5.3</span> Add nice indentation and other configurations</h4>
 <div class="outline-text-4" id="text-4-5-3">
 <div class="org-src-container">
 <pre class="src src-conf">#+STARTUP: indent logdone
@@ -708,8 +725,8 @@ Add this to your initialization script:
 </div>
 </div>
 </div>
-<div id="outline-container-org8ffa46f" class="outline-3">
-<h3 id="org8ffa46f"><span class="section-number-3">4.6</span> Evaluation of Code Blocks</h3>
+<div id="outline-container-org1e5a7d7" class="outline-3">
+<h3 id="org1e5a7d7"><span class="section-number-3">4.6</span> Evaluation of Code Blocks</h3>
 <div class="outline-text-3" id="text-4-6">
 <ul class="org-ul">
 <li><a href="https://www.gnu.org/software/emacs/manual/html_mono/org.html#Evaluating-code-blocks">(org) Evaluating code blocks</a></li>
@@ -717,16 +734,16 @@ Add this to your initialization script:
 </ul>
 </div>
 </div>
-<div id="outline-container-org25a5dda" class="outline-3">
-<h3 id="org25a5dda"><span class="section-number-3">4.7</span> More Shortcuts</h3>
+<div id="outline-container-org153738b" class="outline-3">
+<h3 id="org153738b"><span class="section-number-3">4.7</span> More Shortcuts</h3>
 <div class="outline-text-3" id="text-4-7">
 <dl class="org-dl">
-<dt>M-2 C-c .</dt><dd>insert timestamp</dd>
+<dt><code>M-2 C-c .</code></dt><dd>insert timestamp</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgfba33d0" class="outline-3">
-<h3 id="orgfba33d0"><span class="section-number-3">4.8</span> References</h3>
+<div id="outline-container-org89ccb56" class="outline-3">
+<h3 id="org89ccb56"><span class="section-number-3">4.8</span> References</h3>
 <div class="outline-text-3" id="text-4-8">
 <p>
 Some nice material.
@@ -740,15 +757,16 @@ Some nice material.
 </div>
 </div>
 </div>
-<div id="outline-container-orgcddc2b0" class="outline-2">
-<h2 id="orgcddc2b0"><span class="section-number-2">5</span> IDO Tips</h2>
+<div id="outline-container-orge3926a6" class="outline-2">
+<h2 id="orge3926a6"><span class="section-number-2">5</span> IDO Tips</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-C-s, C-r, C-f, C-d, C-e, C-j are really useful, learn how to use them.
+<code>C-s</code>, <code>C-r</code>, <code>C-f</code>, <code>C-d</code>, <code>C-e</code>, <code>C-j</code> are really useful, learn how
+to use them.
 </p>
 </div>
-<div id="outline-container-org682be63" class="outline-3">
-<h3 id="org682be63"><span class="section-number-3">5.1</span> Shortcuts for ido-find-file</h3>
+<div id="outline-container-org33f1108" class="outline-3">
+<h3 id="org33f1108"><span class="section-number-3">5.1</span> Shortcuts for ido-find-file</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
 <pre class="src src-text">RET     Select the file at the front of the list of matches.
@@ -784,8 +802,8 @@ C-a     Toggle ignoring files listed in ‘ido-ignore-files’.
 </div>
 </div>
 </div>
-<div id="outline-container-org04fd171" class="outline-3">
-<h3 id="org04fd171"><span class="section-number-3">5.2</span> Shortcuts for ido-switch-buffer</h3>
+<div id="outline-container-org401a87a" class="outline-3">
+<h3 id="org401a87a"><span class="section-number-3">5.2</span> Shortcuts for ido-switch-buffer</h3>
 <div class="outline-text-3" id="text-5-2">
 <div class="org-src-container">
 <pre class="src src-text">RET     Select the buffer at the front of the list of matches.
@@ -812,8 +830,8 @@ C-a     Toggle ignoring buffers listed in ‘ido-ignore-buffers’.
 </div>
 </div>
 </div>
-<div id="outline-container-org51b46c0" class="outline-3">
-<h3 id="org51b46c0"><span class="section-number-3">5.3</span> References</h3>
+<div id="outline-container-org05e9b66" class="outline-3">
+<h3 id="org05e9b66"><span class="section-number-3">5.3</span> References</h3>
 <div class="outline-text-3" id="text-5-3">
 <ul class="org-ul">
 <li><a href="http://ergoemacs.org/emacs/emacs_ido_mode.html">http://ergoemacs.org/emacs/emacs_ido_mode.html</a></li>
@@ -823,23 +841,23 @@ C-a     Toggle ignoring buffers listed in ‘ido-ignore-buffers’.
 </div>
 </div>
 </div>
-<div id="outline-container-orgfff14dc" class="outline-2">
-<h2 id="orgfff14dc"><span class="section-number-2">6</span> Lisp Debugging</h2>
+<div id="outline-container-org8c0f187" class="outline-2">
+<h2 id="org8c0f187"><span class="section-number-2">6</span> Lisp Debugging</h2>
 </div>
-<div id="outline-container-org3bc1a56" class="outline-2">
-<h2 id="org3bc1a56"><span class="section-number-2">7</span> Emacs/Elisp Troubleshooting</h2>
+<div id="outline-container-org303958b" class="outline-2">
+<h2 id="org303958b"><span class="section-number-2">7</span> Emacs/Elisp Troubleshooting</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-orgc8b11af" class="outline-3">
-<h3 id="orgc8b11af"><span class="section-number-3">7.1</span> Font test</h3>
+<div id="outline-container-org1c5a9db" class="outline-3">
+<h3 id="org1c5a9db"><span class="section-number-3">7.1</span> Font test</h3>
 <div class="outline-text-3" id="text-7-1">
 <dl class="org-dl">
-<dt>C-h h</dt><dd>view-hello-file</dd>
+<dt><code>C-h h</code></dt><dd>view-hello-file</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgd589825" class="outline-3">
-<h3 id="orgd589825"><span class="section-number-3">7.2</span> Controlled startup</h3>
+<div id="outline-container-org7b43a1a" class="outline-3">
+<h3 id="org7b43a1a"><span class="section-number-3">7.2</span> Controlled startup</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 See <a href="https://www.gnu.org/software/emacs/manual/html_mono/org.html#Batch-execution">(org) Batch execution</a> for an example using <code>-Q</code>, <code>--batch</code> and
@@ -848,8 +866,8 @@ See <a href="https://www.gnu.org/software/emacs/manual/html_mono/org.html#Batch-
 </div>
 </div>
 </div>
-<div id="outline-container-orgfaf0d96" class="outline-2">
-<h2 id="orgfaf0d96"><span class="section-number-2">8</span> References</h2>
+<div id="outline-container-org7ded88d" class="outline-2">
+<h2 id="org7ded88d"><span class="section-number-2">8</span> References</h2>
 <div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li><a href="https://github.com/chrisdone/elisp-guide">https://github.com/chrisdone/elisp-guide</a></li>
@@ -860,7 +878,7 @@ See <a href="https://www.gnu.org/software/emacs/manual/html_mono/org.html#Batch-
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: user01</p>
-<p class="date">Created: 2020-09-12 Sat 14:29</p>
+<p class="date">Created: 2020-09-12 Sat 15:32</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

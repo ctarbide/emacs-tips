@@ -7,74 +7,82 @@
 Press Control + 'h' then 't'.
 ** Finding more information
 - Help Index
-  - C-h ?
+  - =C-h ?=
 - Symbol Search
-  - M-x apropos RET
+  - =M-x apropos RET=
 - Emacs
-  - Emacs Manual (C-h r, C-h i m emacs)
+  - Emacs Manual (=C-h r= or =C-h i m emacs=)
     - info:emacs
 - Emacs Lisp
-  - Introduction to Programming in Emacs Lisp (C-h i m Emacs Lisp Intro)
+  - Introduction to Programming in Emacs Lisp (=C-h i m Emacs Lisp Intro=)
     - info:eintr
-  - Emacs Lisp Reference Manual (C-h i m Elisp)
+  - Emacs Lisp Reference Manual (=C-h i m Elisp=)
     - info:elisp
 * Shortcuts/Key Bindings
 ** Help/Discovery/Diagnostics
-- C-h ? b :: Display all key bindings
-- C-h b :: Display all key bindings
-- C-h k :: Describe a key binding
-- C-h c :: Describe a key binding briefly
-- C-h m :: Describe current major and minor modes
-- C-c C-h :: show all bindings starting with "C-c" prefix
-- C-x C-h :: show all bindings starting with "C-x" prefix
-- C-x c C-h :: show all bindings starting with "C-x c" prefix
+- =C-h ? b= :: Display all key bindings
+- =C-h b= :: Display all key bindings
+- =C-h k= :: Describe a key binding
+- =C-h c= :: Describe a key binding briefly
+- =C-h m= :: Describe current major and minor modes
+- =C-c C-h= :: show all bindings starting with "C-c" prefix
+- =C-x C-h= :: show all bindings starting with "C-x" prefix
+- =C-x c C-h= :: show all bindings starting with "C-x c" prefix
 ** Info Pages
 Info pages are a rich and reliable source of information.
-- C-h i :: open info directory
-- TAB :: next link
-- S-TAB :: previous link
-- c :: copy name of the current info node
-- M-x info-apropos :: search in the indices of all manuals
-- ? :: open summary of all info commands
-- d :: go to info directoy
-- m :: go to a menu item
-- s :: regexp search document
-- C-s :: incremental search forward
-- C-r :: incremental search backward
-- I :: search in the indices of current manual
-- n :: next
-- p :: previous
-- u :: up
-- t :: top
-- q :: quit (selects previous buffer)
+- =C-h i= :: open info directory
+- =TAB= :: next link
+- =S-TAB= :: previous link
+- =c= :: copy name of the current info node
+- =M-x info-apropos= :: search in the indices of all manuals
+- =?= :: open summary of all info commands
+- =d= :: go to info directoy
+- =m= :: go to a menu item
+- =s= :: regexp search document
+- =C-s= :: incremental search forward
+- =C-r= :: incremental search backward
+- =I= :: search in the indices of current manual
+- =n= :: next
+- =p= :: previous
+- =u= :: up
+- =t= :: top
+- =q= :: quit (selects previous buffer)
 
 Searching goes through multiple Info nodes, see [[info:info#Search Text][(info) Search Text]] for
 more information.
+** Text Searching
+- =C-s= :: incremental search forward
+- =C-r= :: incremental search backward
+- =C-M-s= :: incremental search forward (regular expression)
+- =C-M-r= :: incremental search backward (regular expression)
 ** Text Selection and Basic Editing
-- C-SPC :: set-mark-command (start selection)
-- C-w :: kill-region (cut)
-- M-w :: kill-ring-save (copy)
-- C-y :: yank (paste)
-- C-x h :: mark-whole-buffer
+- =C-SPC= :: set-mark-command (start selection)
+- =C-w= :: kill-region (cut)
+- =M-w= :: kill-ring-save (copy)
+- =C-y= :: yank (paste)
+- =C-x h= :: mark-whole-buffer
 ** Keyboard Macros
-- C-x ( :: kmacro-start-macro
-- C-x ) :: kmacro-end-macro
-- C-x e :: kmacro-end-and-call-macro
+- =C-x (= :: kmacro-start-macro
+- =C-x )= :: kmacro-end-macro
+- =C-x e= :: kmacro-end-and-call-macro
 
 See [[info:emacs#Keyboard Macros][(emacs) Keyboard Macros]] for more information.
 ** Lisp evaluation
-- M-:
-- C-x C-e
-- C-M-x
-- M-x ielm
-- M-x eshell
+- =M-:=
+- =C-x C-e=
+- =C-M-x=
+- =M-x ielm=
+- =M-x eshell=
+
+You really should known what each of these do, also remember that =C-h
+k= is a great friend.
 ** Eshell
-- M-p :: previous command (match prefix)
-- M-n :: next command (match prefix)
-- C-c C-c :: eshell-interrupt-process
-- C-c C-p :: eshell-previous-prompt
-- C-c C-n :: eshell-next-prompt
-- C-c C-l :: eshell-list-history
+- =M-p= :: previous command (match prefix)
+- =M-n= :: next command (match prefix)
+- =C-c C-c= :: eshell-interrupt-process
+- =C-c C-p= :: eshell-previous-prompt
+- =C-c C-n= :: eshell-next-prompt
+- =C-c C-l= :: eshell-list-history
 * File Variables
 File variables are important to select and customize major and minor
 modes in a file-by-file basis, see [[info:emacs#Specifying File Variables][Specifying File Variables]]
@@ -88,33 +96,33 @@ See also:
 * Org Mode Tips
 ** Shortcuts
 *** Basics and navigation.
-- TAB / S-TAB :: (un)fold
-- M-up/down :: move a headline up or down
-- M-left/right :: promote or demote a headline
-- C-RET :: insert a new headline
-- M-RET :: insert a new item
-- C-c C-w :: move entries
-- C-c - :: change list style
-- C-c / t :: show TODOs in current document
-- S-left/right :: very useful, depends on context
-- C-c C-c :: context-dependant, toggle checkboxes, tagging
-- C-c C-o :: opens link
-- C-c C-e :: export menu (try 'h' then 'o')
-- C-c C-e C-s :: export scope configuration
-- C-c C-z :: take note
-- C-c C-t :: cycle task states
-- C-u 5 C-c C-t :: set 5th task state (or clean it if 5th is not
-                   set)
+- =TAB= / =S-TAB= :: (un)fold
+- =M-up= / =M-down= :: move a headline up or down
+- =M-left= / =M-right= :: promote or demote a headline
+- =C-RET= :: insert a new headline
+- =M-RET= :: insert a new item
+- =C-c C-w= :: move entries
+- =C-c -= :: change list style
+- =C-c / t= :: show TODOs in current document
+- =S-left= / =S-right= :: very useful, depends on context
+- =C-c C-c= :: context-dependant, toggle checkboxes, tagging
+- =C-c C-o= :: opens link
+- =C-c C-e= :: export menu (try 'h' then 'o')
+- =C-c C-e C-s= :: export scope configuration
+- =C-c C-z= :: take note
+- =C-c C-t= :: cycle task states
+- =C-u 5 C-c C-t= :: set 5th task state (or clean it if 5th is not
+  set)
 *** Miscellaneous
-- C-c C-, :: org-insert-structure-template (e.g. insert being_src
-             blocks)
-- C-c ' :: org-edit-special, org-edit-export-block and others
-- C-c $ :: org-archive-subtree
+- =C-c C-,= :: org-insert-structure-template (e.g. insert being_src
+  blocks)
+- =C-c '= :: org-edit-special, org-edit-export-block and others
+- =C-c $= or =C-c C-x C-s= :: org-archive-subtree
 ** Links
 - explict using angular/angle brackets: <info:eintr#Symbols as Chest>
 - implict/nice/rich using square brackets: [[info:eintr#Symbols as Chest][eintr: Symbols as Chest]]
 ** Examples
-*** Lord of the Rings (from org4beginners)
+*** Lord of the Rings (from org4beginners, see references)
 My favorite scenes are (in this order)
 1. The attack of the Rohirrim
 2. Eowyn's fight with the witch king
@@ -158,14 +166,14 @@ You can make words *bold*, /italic/, _underlined_, =code= and
 ** Export
 *** Shortcuts
 - HTML
-  - ‘C-c C-e h h’ (‘org-html-export-to-html’)
-  - ‘C-c C-e h H’ (‘org-html-export-as-html’)
-  - ‘C-c C-e h o’ (‘org-html-export-as-html’)
+  - =C-c C-e h h= (=M-x org-html-export-to-html=)
+  - =C-c C-e h H= (=M-x org-html-export-as-html=)
+  - =C-c C-e h o= (=C-u M-x org-html-export-to-html=)
     - exports and open in browser
-  - M-x org-html-convert-region-to-html
+  - =M-x org-html-convert-region-to-html=
     - insert html in current buffer at point
 - LaTeX
-  - ‘C-c C-e l l’ (‘org-latex-export-to-latex’)
+  - =C-c C-e l l= (=M-x org-latex-export-to-latex=)
 *** References
 - =M-:= then =(info-other-window "(org) HTML export commands")=
 - =M-:= then =(info-other-window "(org) LaTeX/PDF export commands")=
@@ -188,13 +196,14 @@ Add this to your initialization script:
 - [[info:org#Evaluating code blocks][(org) Evaluating code blocks]]
 - [[info:org#Results of evaluation][(org) Results of evaluation]]
 ** More Shortcuts
-- M-2 C-c . :: insert timestamp
+- =M-2 C-c .= :: insert timestamp
 ** References
 Some nice material.
 - https://orgmode.org/worg/org-tutorials/org4beginners.html
   - https://bzg.fr/en/org-playing-with-lists-screencast.html/
 * IDO Tips
-C-s, C-r, C-f, C-d, C-e, C-j are really useful, learn how to use them.
+=C-s=, =C-r=, =C-f=, =C-d=, =C-e=, =C-j= are really useful, learn how
+to use them.
 ** Shortcuts for ido-find-file
 #+begin_src text
   RET     Select the file at the front of the list of matches.
@@ -257,7 +266,7 @@ C-s, C-r, C-f, C-d, C-e, C-j are really useful, learn how to use them.
 * Lisp Debugging
 * Emacs/Elisp Troubleshooting
 ** Font test
-- C-h h :: view-hello-file
+- =C-h h= :: view-hello-file
 ** Controlled startup
 See [[info:org#Batch execution][(org) Batch execution]] for an example using =-Q=, =--batch= and
 =--eval= flags.
