@@ -167,8 +167,8 @@ You can make words *bold*, /italic/, _underlined_, =code= and
 - LaTeX
   - ‘C-c C-e l l’ (‘org-latex-export-to-latex’)
 *** References
-- (info-other-window "(org) HTML export commands")
-- (info-other-window "(org) LaTeX/PDF export commands")
+- =M-:= then =(info-other-window "(org) HTML export commands")=
+- =M-:= then =(info-other-window "(org) LaTeX/PDF export commands")=
 ** Configuration
 *** Change default workflow states
 Add this to your initialization script:
@@ -179,6 +179,10 @@ Add this to your initialization script:
 *** Add timestamp when tasks are DONE
 #+begin_src conf
   ,#+STARTUP: logdone
+#+end_src
+*** Add nice indentation and other configurations
+#+begin_src conf
+  ,#+STARTUP: indent logdone
 #+end_src
 ** Evaluation of Code Blocks
 - [[info:org#Evaluating code blocks][(org) Evaluating code blocks]]
@@ -259,4 +263,4 @@ See [[info:org#Batch execution][(org) Batch execution]] for an example using =-Q
 =--eval= flags.
 * References
 - https://github.com/chrisdone/elisp-guide
-- (info-other-window "(emacs) Specifying File Variables")
+- =M-:= then =(info-other-window "(emacs) Specifying File Variables")=
