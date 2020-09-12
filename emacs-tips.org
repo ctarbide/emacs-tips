@@ -1,4 +1,4 @@
-# -*- mode:org; coding:utf-8 -*-
+# -*- mode:org; coding:utf-8-unix -*-
 
 #+TITLE: Emacs Tips
 #+STARTUP: indent
@@ -33,6 +33,7 @@ Info pages are a rich and reliable source of information.
 - C-h i :: open info directory
 - TAB :: next link
 - S-TAB :: previous link
+- c :: copy name of the current info node
 - M-x info-apropos :: search in the indices of all manuals
 - ? :: open summary of all info commands
 - d :: go to info directoy
@@ -67,6 +68,13 @@ See [[info:emacs#Keyboard Macros][(emacs) Keyboard Macros]] for more information
 - C-M-x
 - M-x ielm
 - M-x eshell
+** Eshell
+- M-p :: previous command (match prefix)
+- M-n :: next command (match prefix)
+- C-c C-c :: eshell-interrupt-process
+- C-c C-p :: eshell-previous-prompt
+- C-c C-n :: eshell-next-prompt
+- C-c C-l :: eshell-list-history
 * File Variables
 File variables are important to select and customize major and minor
 modes in a file-by-file basis, see [[info:emacs#Specifying File Variables][Specifying File Variables]]
@@ -159,8 +167,8 @@ You can make words *bold*, /italic/, _underlined_, =code= and
 - LaTeX
   - ‘C-c C-e l l’ (‘org-latex-export-to-latex’)
 *** References
-- (info "(org)HTML export commands")
-- (info "(org)LaTeX/PDF export commands")
+- (info-other-window "(org) HTML export commands")
+- (info-other-window "(org) LaTeX/PDF export commands")
 ** Configuration
 *** Change default workflow states
 Add this to your initialization script:
@@ -251,4 +259,4 @@ See [[info:org#Batch execution][(org) Batch execution]] for an example using =-Q
 =--eval= flags.
 * References
 - https://github.com/chrisdone/elisp-guide
-- (info "(emacs) Specifying File Variables")
+- (info-other-window "(emacs) Specifying File Variables")
