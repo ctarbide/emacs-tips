@@ -99,6 +99,7 @@ See also:
 - =TAB= / =S-TAB= :: (un)fold
 - =M-up= / =M-down= :: move a headline up or down
 - =M-left= / =M-right= :: promote or demote a headline
+- =M-S-left= / =M-S-right= :: promote or demote a subtree
 - =C-RET= :: insert a new headline
 - =M-RET= :: insert a new item
 - =C-c C-w= :: move entries
@@ -114,7 +115,7 @@ See also:
 - =C-u 5 C-c C-t= :: set 5th task state (or clean it if 5th is not
   set)
 *** Miscellaneous
-- =C-c C-,= :: org-insert-structure-template (e.g. insert being_src
+- =C-c C-,= :: org-insert-structure-template (e.g. insert =being_src=
   blocks)
 - =C-c '= :: org-edit-special, org-edit-export-block and others
 - =C-c $= or =C-c C-x C-s= :: org-archive-subtree
@@ -263,6 +264,12 @@ to use them.
 - http://ergoemacs.org/emacs/emacs_ido_mode.html
 - C-h f ido-find-file RET
 - C-h f ido-switch-buffer RET
+* Slime Basics
+Slime can be seem as a Lisp IDE
+
+- =C-c C-k= :: compile whole file into an FASL file
+- =C-c C-c= :: compile an individual block
+
 * Lisp Debugging
 * Emacs/Elisp Troubleshooting
 ** Font test
