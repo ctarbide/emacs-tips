@@ -4,10 +4,17 @@
 #+STARTUP: indent
 
 * For the absolute beginner
-Press Control + 'h' then 't'.
+
+Press Control + 'h' twice then press 't', or press Control + 'h' then
+'t' to go directly to the tutorial.
+
+
 ** Finding more information
+
 - Help Index
+
   - =C-h ?=
+
 - Symbol Search
   - =M-x apropos RET=
 - Emacs
@@ -18,72 +25,140 @@ Press Control + 'h' then 't'.
     - info:eintr
   - Emacs Lisp Reference Manual (=C-h i m Elisp=)
     - info:elisp
+
+
 * Shortcuts/Key Bindings
+
+
 ** Help/Discovery/Diagnostics
+
 - =C-h ? b= :: Display all key bindings
+
 - =C-h b= :: Display all key bindings
+
 - =C-h k= :: Describe a key binding
+
 - =C-h c= :: Describe a key binding briefly
+
 - =C-h m= :: Describe current major and minor modes
+
 - =C-c C-h= :: show all bindings starting with "C-c" prefix
+
 - =C-x C-h= :: show all bindings starting with "C-x" prefix
+
 - =C-x c C-h= :: show all bindings starting with "C-x c" prefix
+
+
 ** Info Pages
+
 Info pages are a rich and reliable source of information.
+
 - =C-h i= :: open info directory
+
 - =TAB= :: next link
+
 - =S-TAB= :: previous link
+
 - =c= :: copy name of the current info node
+
 - =M-x info-apropos= :: search in the indices of all manuals
+
 - =?= :: open summary of all info commands
+
 - =d= :: go to info directoy
+
 - =m= :: go to a menu item
+
 - =s= :: regexp search document
+
 - =C-s= :: incremental search forward
+
 - =C-r= :: incremental search backward
+
 - =I= :: search in the indices of current manual
+
 - =n= :: next
+
 - =p= :: previous
+
 - =u= :: up
+
 - =t= :: top
+
 - =q= :: quit (selects previous buffer)
 
 Searching goes through multiple Info nodes, see [[info:info#Search Text][(info) Search Text]] for
 more information.
+
+
 ** Text Searching
+
 - =C-s= :: incremental search forward
+
 - =C-r= :: incremental search backward
+
 - =C-M-s= :: incremental search forward (regular expression)
+
 - =C-M-r= :: incremental search backward (regular expression)
+
+
 ** Text Selection and Basic Editing
+
 - =C-SPC= :: set-mark-command (start selection)
+
 - =C-w= :: kill-region (cut)
+
 - =M-w= :: kill-ring-save (copy)
+
 - =C-y= :: yank (paste)
+
 - =C-x h= :: mark-whole-buffer
+
+
 ** Keyboard Macros
+
 - =C-x (= :: kmacro-start-macro
+
 - =C-x )= :: kmacro-end-macro
+
 - =C-x e= :: kmacro-end-and-call-macro
 
 See [[info:emacs#Keyboard Macros][(emacs) Keyboard Macros]] for more information.
+
+
 ** Lisp evaluation
+
 - =M-:=
+
 - =C-x C-e=
+
 - =C-M-x=
+
 - =M-x ielm=
+
 - =M-x eshell=
 
 You really should known what each of these do, also remember that =C-h
 k= is a great friend.
+
+
 ** Eshell
+
 - =M-p= :: previous command (match prefix)
+
 - =M-n= :: next command (match prefix)
+
 - =C-c C-c= :: eshell-interrupt-process
+
 - =C-c C-p= :: eshell-previous-prompt
+
 - =C-c C-n= :: eshell-next-prompt
+
 - =C-c C-l= :: eshell-list-history
+
+
 * File Variables
+
 File variables are important to select and customize major and minor
 modes in a file-by-file basis, see [[info:emacs#Specifying File Variables][Specifying File Variables]]
 
@@ -93,119 +168,238 @@ practice to remove them as they are consumed by their handling modes.
 
 See also:
 - [[info:emacs#Directory Variables][Directory Variables]]
+
+
 * Org Mode Tips
+
+
 ** Shortcuts
+
 *** Basics and navigation.
+
 - =TAB= / =S-TAB= :: (un)fold
+
 - =M-up= / =M-down= :: move a headline up or down
+
 - =M-left= / =M-right= :: promote or demote a headline
+
 - =M-S-left= / =M-S-right= :: promote or demote a subtree
+
 - =C-RET= :: insert a new headline
+
 - =M-RET= :: insert a new item
+
 - =C-c C-w= :: move entries
+
 - =C-c -= :: change list style
+
 - =C-c / t= :: show TODOs in current document
+
 - =S-left= / =S-right= :: very useful, depends on context
+
 - =C-c C-c= :: context-dependant, toggle checkboxes, tagging
+
 - =C-c C-o= :: opens link
+
 - =C-c C-e= :: export menu (try 'h' then 'o')
+
 - =C-c C-e C-s= :: export scope configuration
+
 - =C-c C-z= :: take note
+
 - =C-c C-t= :: cycle task states
+
 - =C-u 5 C-c C-t= :: set 5th task state (or clean it if 5th is not
   set)
+
+
 *** Miscellaneous
+
 - =C-c C-,= :: org-insert-structure-template (e.g. insert =being_src=
   blocks)
+
 - =C-c '= :: org-edit-special, org-edit-export-block and others
+
 - =C-c $= or =C-c C-x C-s= :: org-archive-subtree
+
+
 ** Links
+
 - explict using angular/angle brackets: <info:eintr#Symbols as Chest>
+
 - implict/nice/rich using square brackets: [[info:eintr#Symbols as Chest][eintr: Symbols as Chest]]
+
+
 ** Examples
+
+
 *** Lord of the Rings (from org4beginners, see references)
+
 My favorite scenes are (in this order)
+
 1. The attack of the Rohirrim
+
 2. Eowyn's fight with the witch king
    1. this was already my favorite scene in the book
    2. I really like Miranda Otto.
+
 3. Peter Jackson being shot by Legolas
+
    1. on DVD only
+
    He makes a really funny face when it happens.
    But in the end, no individual scenes matter but the film as a whole.
    Important actors in this film are:
+
    - Elijah Wood :: He plays Frodo
+
    - Sean Austin :: He plays Sam, Frodo's friend.  I still remember
                     him very well from his role as Mikey Walsh in The Goonies.
+
+
 *** Text Markups
+
 You can make words *bold*, /italic/, _underlined_, =code= and
 ~verbatim~, and, if you must, +strike-through+.
+
+
 *** Checkboxes
+
+
 **** Basic [1/2] [50%]
+
 - [ ] an item
+
 - [X] uset C-c C-c to toggle
+
+
 **** Sublists
+
 - [-] Group 1
+
   + [ ] item 1
+
   + [X] item 2
+
 - [1/2] Group 2
+
   + [ ] item 1
+
   + [X] item 2
+
 - [50%] Group 3
+
   + [ ] item 1
+
   + [X] item 2
+
 - [1/2] Group 4 (does not count subitems)
+
   * [X] item 1
+
   * [-] item 2
+
     1. [X] subitem 2.1
+
     2. [ ] subitem 2.2
+
 - [50%] Group 5 (does not count subitems)
+
   * [X] item 1
+
   * [-] item 2
+
     1. [X] subitem 2.1
+
     2. [ ] subitem 2.2
+
+
 ** Export
+
+
 *** Shortcuts
+
 - HTML
+
   - =C-c C-e h h= (=M-x org-html-export-to-html=)
+
   - =C-c C-e h H= (=M-x org-html-export-as-html=)
+
   - =C-c C-e h o= (=C-u M-x org-html-export-to-html=)
+
     - exports and open in browser
+
   - =M-x org-html-convert-region-to-html=
+
     - insert html in current buffer at point
+
 - LaTeX
+
   - =C-c C-e l l= (=M-x org-latex-export-to-latex=)
+
+
 *** References
+
 - =M-:= then =(info-other-window "(org) HTML export commands")=
+
 - =M-:= then =(info-other-window "(org) LaTeX/PDF export commands")=
+
+
 ** Configuration
+
+
 *** Change default workflow states
+
 Add this to your initialization script:
+
 #+begin_src emacs-lisp
 (setq org-todo-keywords
   '((sequence "TODO" "IN-PROGRESS" "WAITING" "WONTDO" "DONE")))
 #+end_src
+
+
 *** Add timestamp when tasks are DONE
+
 #+begin_src conf
   ,#+STARTUP: logdone
 #+end_src
+
+
 *** Add nice indentation and other configurations
+
 #+begin_src conf
   ,#+STARTUP: indent logdone
 #+end_src
+
+
 ** Evaluation of Code Blocks
+
 - [[info:org#Evaluating code blocks][(org) Evaluating code blocks]]
+
 - [[info:org#Results of evaluation][(org) Results of evaluation]]
+
+
 ** More Shortcuts
+
 - =M-2 C-c .= :: insert timestamp
+
+
 ** References
+
 Some nice material.
+
 - https://orgmode.org/worg/org-tutorials/org4beginners.html
+
   - https://bzg.fr/en/org-playing-with-lists-screencast.html/
+
 * IDO Tips
+
 =C-s=, =C-r=, =C-f=, =C-d=, =C-e=, =C-j= are really useful, learn how
 to use them.
+
+
 ** Shortcuts for ido-find-file
+
 #+begin_src text
   RET     Select the file at the front of the list of matches.
   If the list is empty, possibly prompt to create new file.
@@ -237,7 +431,10 @@ to use them.
   ?       Show list of matching files in separate window.
   C-a     Toggle ignoring files listed in ‘ido-ignore-files’.
 #+end_src
+
+
 ** Shortcuts for ido-switch-buffer
+
 #+begin_src text
   RET     Select the buffer at the front of the list of matches.
           If the list is empty, possibly prompt to create new buffer.
@@ -260,23 +457,45 @@ to use them.
   C-k     Kill buffer at head of buffer list.
   C-a     Toggle ignoring buffers listed in ‘ido-ignore-buffers’.
 #+end_src
+
+
 ** References
+
 - http://ergoemacs.org/emacs/emacs_ido_mode.html
+
 - C-h f ido-find-file RET
+
 - C-h f ido-switch-buffer RET
+
+
 * Slime Basics
+
 Slime can be seem as a Lisp IDE
 
 - =C-c C-k= :: compile whole file into an FASL file
+
 - =C-c C-c= :: compile an individual block
 
-* Lisp Debugging
+
+* TODO Lisp Debugging
+
+
 * Emacs/Elisp Troubleshooting
+
 ** Font test
+
 - =C-h h= :: view-hello-file
+
+
 ** Controlled startup
+
 See [[info:org#Batch execution][(org) Batch execution]] for an example using =-Q=, =--batch= and
 =--eval= flags.
+
+
 * References
+
 - https://github.com/chrisdone/elisp-guide
+
 - =M-:= then =(info-other-window "(emacs) Specifying File Variables")=
+
