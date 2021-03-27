@@ -16,14 +16,23 @@ Press Control + 'h' twice then press 't', or press Control + 'h' then
   - =C-h ?=
 
 - Symbol Search
+
   - =M-x apropos RET=
+
 - Emacs
+
   - Emacs Manual (=C-h r= or =C-h i m emacs=)
+
     - info:emacs
+
 - Emacs Lisp
+
   - Introduction to Programming in Emacs Lisp (=C-h i m Emacs Lisp Intro=)
+
     - info:eintr
+
   - Emacs Lisp Reference Manual (=C-h i m Elisp=)
+
     - info:elisp
 
 
@@ -53,7 +62,15 @@ Press Control + 'h' twice then press 't', or press Control + 'h' then
 
 Info pages are a rich and reliable source of information.
 
-- =C-h i= :: open info directory
+- =C-h i= :: show Info Browser
+
+- =?= :: list key bindings, press SPC to scroll
+
+- =d= :: go to info directoy
+
+- =m= :: go to a menu item
+
+- =I= :: search in the indices of current document
 
 - =TAB= :: next link
 
@@ -63,19 +80,11 @@ Info pages are a rich and reliable source of information.
 
 - =M-x info-apropos= :: search in the indices of all manuals
 
-- =?= :: open summary of all info commands
-
-- =d= :: go to info directoy
-
-- =m= :: go to a menu item
-
 - =s= :: regexp search document
 
 - =C-s= :: incremental search forward
 
 - =C-r= :: incremental search backward
-
-- =I= :: search in the indices of current manual
 
 - =n= :: next
 
@@ -83,7 +92,7 @@ Info pages are a rich and reliable source of information.
 
 - =u= :: up
 
-- =t= :: top
+- =t= :: top of current document
 
 - =q= :: quit (selects previous buffer)
 
@@ -174,6 +183,7 @@ See also:
 
 
 ** Shortcuts
+
 
 *** Basics and navigation.
 
@@ -314,6 +324,7 @@ You can make words *bold*, /italic/, _underlined_, =code= and
     2. [ ] subitem 2.2
 
 
+
 ** Export
 
 
@@ -391,6 +402,7 @@ Some nice material.
 - https://orgmode.org/worg/org-tutorials/org4beginners.html
 
   - https://bzg.fr/en/org-playing-with-lists-screencast.html/
+
 
 * IDO Tips
 
@@ -477,10 +489,54 @@ Slime can be seem as a Lisp IDE
 - =C-c C-c= :: compile an individual block
 
 
-* TODO Lisp Debugging
+* Emacs Lisp Debugging
+
+There are two well known interactive debugging solutions:
+
+- =debugger= :: a debugger for the emacs lisp evaluator
+
+- =edebug= :: A source-level Emacs Lisp debugger
+
+** Using =debugger=
+
+
+*** Most Common Keybindings
+
+- =?= :: help
+
+- =q= :: quit
+
+- =c= :: debugger-continue (step out)
+
+- =d= :: debugger-step-through (step over)
+
+- =e= :: debugger-eval-expression, eval expression in stack frame
+
+  - see also: =R=
+
+
+*** How to manually trigger the debugger
+
+- =(describe-function 'debug-on-entry)=
+
+
+*** How to watch a variable
+
+- =(describe-function 'add-variable-watcher)=
+
+
+** TODO Using =edebug=
+
+
+** References
+
+- https://www.gnu.org/software/emacs/manual/html_node/elisp/Debugging.html
+
+- https://www.gnu.org/software/emacs/manual/html_node/elisp/Watching-Variables.html
 
 
 * Emacs/Elisp Troubleshooting
+
 
 ** Font test
 
