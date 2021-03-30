@@ -8,10 +8,14 @@
 Press Control + 'h' twice then press 't', or press Control + 'h' then
 't' to go directly to the tutorial.
 
+Control + 'h' then '?' (=C-h ?=) also opens Metahelp, press 'q' to
+dismiss.
 
 ** Finding more information
 
-- Help Index
+- Metahelp (=q= to dismiss)
+
+  - =C-h C-h=
 
   - =C-h ?=
 
@@ -21,7 +25,7 @@ Press Control + 'h' twice then press 't', or press Control + 'h' then
 
 - Emacs
 
-  - Emacs Manual (=C-h r= or =C-h i m emacs=)
+  - Emacs Manual (=C-h r= or =C-h i d m emacs RET=)
 
     - info:emacs
 
@@ -38,10 +42,11 @@ Press Control + 'h' twice then press 't', or press Control + 'h' then
 
 * Shortcuts/Key Bindings
 
-
 ** Help/Discovery/Diagnostics
 
 - =C-h ? b= :: Display all key bindings
+
+- =C-h C-h b= :: Display all key bindings
 
 - =C-h b= :: Display all key bindings
 
@@ -56,6 +61,8 @@ Press Control + 'h' twice then press 't', or press Control + 'h' then
 - =C-x C-h= :: show all bindings starting with "C-x" prefix
 
 - =C-x c C-h= :: show all bindings starting with "C-x c" prefix
+
+- =C-h e= :: show messages buffer
 
 
 ** Info Pages
@@ -121,7 +128,7 @@ more information.
 
 - =C-y= :: yank (paste)
 
-- =C-x h= :: mark-whole-buffer
+- =C-x h= :: mark-whole-buffer (select all)
 
 
 ** Keyboard Macros
@@ -147,23 +154,25 @@ See [[info:emacs#Keyboard Macros][(emacs) Keyboard Macros]] for more information
 
 - =M-x eshell=
 
-You really should known what each of these do, also remember that =C-h
-k= is a great friend.
+You really should known what each of these do (use =C-h k= to describe
+each key binding).
 
 
-** Eshell
+** Shell
 
-- =M-p= :: previous command (match prefix)
+- =M-p= :: previous command
 
-- =M-n= :: next command (match prefix)
+- =M-n= :: next command
 
-- =C-c C-c= :: eshell-interrupt-process
+- =C-c C-c= :: send interrupt signal
 
-- =C-c C-p= :: eshell-previous-prompt
+- =C-c C-d= :: close stdin (send eof)
 
-- =C-c C-n= :: eshell-next-prompt
+- =C-c C-p= :: previous prompt
 
-- =C-c C-l= :: eshell-list-history
+- =C-c C-n= :: next prompt
+
+- =C-c C-l= :: show input history
 
 
 * File Variables
@@ -409,7 +418,6 @@ Some nice material.
 =C-s=, =C-r=, =C-f=, =C-d=, =C-e=, =C-j= are really useful, learn how
 to use them.
 
-
 ** Shortcuts for ido-find-file
 
 #+begin_src text
@@ -480,6 +488,20 @@ to use them.
 - C-h f ido-switch-buffer RET
 
 
+* Lisp Editing
+
+- =C-M-f= :: forward sexp (s-expression)
+
+- =C-M-b= :: backward sexp
+
+- =C-M-k= :: kill sexp
+
+- =C-- C-M-k= :: kill sexp (before point)
+
+
+* TODO Paredit Basics
+
+
 * Slime Basics
 
 Slime can be seem as a Lisp IDE
@@ -525,7 +547,77 @@ There are two well known interactive debugging solutions:
 - =(describe-function 'add-variable-watcher)=
 
 
-** TODO Using =edebug=
+** Using =edebug=
+
+- SPC :: edebug-step-mode
+
+  Step: stop at the next stop point encountered
+  (edebug-step-mode).
+
+- b :: edebug-set-breakpoint
+
+- g :: edebug-go-mode
+
+  Go: run until the next breakpoint (edebug-go-mode).
+
+- c :: edebug-continue-mode
+
+  Continue: pause one second at each breakpoint, and then
+  continue (edebug-continue-mode).
+
+- S :: edebug-stop
+
+  Stop: don’t execute any more of the program, but wait for
+  more Edebug commands (edebug-stop).
+
+- h :: edebug-goto-here
+
+- i :: edebug-step-in
+
+- G :: edebug-Go-nonstop-mode
+
+  Go non-stop: ignore breakpoints
+  (edebug-Go-nonstop-mode). You can still stop the program by
+  typing S, or any editing command.
+
+- n :: edebug-next-mode
+
+- o :: edebug-step-out
+
+- t :: edebug-trace-mode
+
+  Trace: pause (normally one second) at each Edebug stop point
+  (edebug-trace-mode).
+
+*** Example
+
+#+begin_src emacs-lisp
+  ;; reference: https://www.youtube.com/watch?v=odkYXXYOxpo
+
+  ;; (eval-buffer)
+  ;; (main)
+  ;; M-x edebug-Go-nonstop-mode RET (or simply G)
+
+  (require 'edebug)
+
+  (defmacro when-symbol-match (regex sym &rest body)
+    `(when (string-match-p ,regex (symbol-name ,sym))
+       ,@body))
+
+  (defun list-symbols (regex)
+    (let ((lst))
+      (mapatoms (lambda (a)
+                  (when-symbol-match
+                   regex a
+                   (push a lst))))
+      lst))
+
+  (defun main ()
+    (edebug-instrument-function 'list-symbols)
+    (message "symbols: %S" (list-symbols "^file.*non.*"))
+    (pop-to-buffer (get-buffer "*Messages*"))
+    (other-window 1))
+#+end_src
 
 
 ** References
@@ -534,9 +626,10 @@ There are two well known interactive debugging solutions:
 
 - https://www.gnu.org/software/emacs/manual/html_node/elisp/Watching-Variables.html
 
+- https://www.gnu.org/software/emacs/manual/html_node/elisp/Edebug-Execution-Modes.html
+
 
 * Emacs/Elisp Troubleshooting
-
 
 ** Font test
 
@@ -547,6 +640,14 @@ There are two well known interactive debugging solutions:
 
 See [[info:org#Batch execution][(org) Batch execution]] for an example using =-Q=, =--batch= and
 =--eval= flags.
+
+*** Example
+
+#+begin_src sh
+  emacs -Q --eval '(load-theme (quote wombat))'
+  # or
+  emacs -Q --eval '(load-theme (quote tango-dark))'
+#+end_src
 
 
 * References
