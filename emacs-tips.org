@@ -5,13 +5,19 @@
 
 * For the absolute beginner
 
+
 Press Control + 'h' twice then press 't', or press Control + 'h' then
 't' to go directly to the tutorial.
 
 Control + 'h' then '?' (=C-h ?=) also opens Metahelp, press 'q' to
 dismiss.
 
+The menu can be very helpful to learn common key bindings, use =F10=
+to bring it up.
+
+
 ** Finding more information
+
 
 - Metahelp (=q= to dismiss)
 
@@ -42,7 +48,9 @@ dismiss.
 
 * Shortcuts/Key Bindings
 
+
 ** Help/Discovery/Diagnostics
+
 
 - =C-h ? b= :: Display all key bindings
 
@@ -66,6 +74,7 @@ dismiss.
 
 
 ** Info Pages
+
 
 Info pages are a rich and reliable source of information.
 
@@ -120,6 +129,7 @@ more information.
 
 ** Text Selection and Basic Editing
 
+
 - =C-SPC= :: set-mark-command (start selection)
 
 - =C-w= :: kill-region (cut)
@@ -130,8 +140,11 @@ more information.
 
 - =C-x h= :: mark-whole-buffer (select all)
 
+- =M-\= :: delete-horizontal-space
+
 
 ** Keyboard Macros
+
 
 - =C-x (= :: kmacro-start-macro
 
@@ -143,6 +156,7 @@ See [[info:emacs#Keyboard Macros][(emacs) Keyboard Macros]] for more information
 
 
 ** Lisp evaluation
+
 
 - =M-:=
 
@@ -159,6 +173,7 @@ each key binding).
 
 
 ** Shell
+
 
 - =M-p= :: previous command
 
@@ -179,6 +194,7 @@ each key binding).
 
 * File Variables
 
+
 File variables are important to select and customize major and minor
 modes in a file-by-file basis, see [[info:emacs#Specifying File Variables][Specifying File Variables]]
 
@@ -197,6 +213,7 @@ See also:
 
 
 *** Basics and navigation.
+
 
 - =TAB= / =S-TAB= :: (un)fold
 
@@ -236,6 +253,7 @@ See also:
 
 *** Miscellaneous
 
+
 - =C-c C-,= :: org-insert-structure-template (e.g. insert =being_src=
   blocks)
 
@@ -245,6 +263,7 @@ See also:
 
 
 ** Links
+
 
 - explict using angular/angle brackets: <info:eintr#Symbols as Chest>
 
@@ -279,6 +298,7 @@ My favorite scenes are (in this order)
 
 
 *** Text Markups
+
 
 You can make words *bold*, /italic/, _underlined_, =code= and
 ~verbatim~, and, if you must, +strike-through+.
@@ -341,6 +361,7 @@ You can make words *bold*, /italic/, _underlined_, =code= and
 
 *** Shortcuts
 
+
 - HTML
 
   - =C-c C-e h h= (=M-x org-html-export-to-html=)
@@ -362,6 +383,7 @@ You can make words *bold*, /italic/, _underlined_, =code= and
 
 *** References
 
+
 - =M-:= then =(info-other-window "(org) HTML export commands")=
 
 - =M-:= then =(info-other-window "(org) LaTeX/PDF export commands")=
@@ -371,6 +393,7 @@ You can make words *bold*, /italic/, _underlined_, =code= and
 
 
 *** Change default workflow states
+
 
 Add this to your initialization script:
 
@@ -382,12 +405,14 @@ Add this to your initialization script:
 
 *** Add timestamp when tasks are DONE
 
+
 #+begin_src conf
   ,#+STARTUP: logdone
 #+end_src
 
 
 *** Add nice indentation and other configurations
+
 
 #+begin_src conf
   ,#+STARTUP: indent logdone
@@ -396,6 +421,7 @@ Add this to your initialization script:
 
 ** Evaluation of Code Blocks
 
+
 - [[info:org#Evaluating code blocks][(org) Evaluating code blocks]]
 
 - [[info:org#Results of evaluation][(org) Results of evaluation]]
@@ -403,10 +429,12 @@ Add this to your initialization script:
 
 ** More Shortcuts
 
+
 - =M-2 C-c .= :: insert timestamp
 
 
 ** References
+
 
 Some nice material.
 
@@ -417,10 +445,13 @@ Some nice material.
 
 * IDO Tips
 
+
 =C-s=, =C-r=, =C-f=, =C-d=, =C-e=, =C-j= are really useful, learn how
 to use them.
 
+
 ** Shortcuts for ido-find-file
+
 
 #+begin_src text
   RET     Select the file at the front of the list of matches.
@@ -457,6 +488,7 @@ to use them.
 
 ** Shortcuts for ido-switch-buffer
 
+
 #+begin_src text
   RET     Select the buffer at the front of the list of matches.
           If the list is empty, possibly prompt to create new buffer.
@@ -483,6 +515,7 @@ to use them.
 
 ** References
 
+
 - http://ergoemacs.org/emacs/emacs_ido_mode.html
 
 - C-h f ido-find-file RET
@@ -491,6 +524,7 @@ to use them.
 
 
 * Lisp Editing
+
 
 - =C-M-f= :: forward sexp (s-expression)
 
@@ -506,6 +540,7 @@ to use them.
 
 * Slime Basics
 
+
 Slime can be seem as a Lisp IDE
 
 - =C-c C-k= :: compile whole file into an FASL file
@@ -515,11 +550,13 @@ Slime can be seem as a Lisp IDE
 
 * Emacs Lisp Debugging
 
+
 There are two well known interactive debugging solutions:
 
 - =debugger= :: a debugger for the emacs lisp evaluator
 
 - =edebug= :: A source-level Emacs Lisp debugger
+
 
 ** Using =debugger=
 
@@ -541,15 +578,18 @@ There are two well known interactive debugging solutions:
 
 *** How to manually trigger the debugger
 
+
 - =(describe-function 'debug-on-entry)=
 
 
 *** How to watch a variable
 
+
 - =(describe-function 'add-variable-watcher)=
 
 
 ** Using =edebug=
+
 
 - SPC :: edebug-step-mode
 
@@ -591,7 +631,9 @@ There are two well known interactive debugging solutions:
   Trace: pause (normally one second) at each Edebug stop point
   (edebug-trace-mode).
 
+
 *** Example
+
 
 #+begin_src emacs-lisp
   ;; reference: https://www.youtube.com/watch?v=odkYXXYOxpo
@@ -623,6 +665,7 @@ There are two well known interactive debugging solutions:
 
 
 ** References
+
 
 - https://www.gnu.org/software/emacs/manual/html_node/elisp/Debugging.html
 
